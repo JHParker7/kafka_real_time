@@ -12,7 +12,6 @@ consumer = KafkaConsumer(
     value_deserializer=lambda m: json.loads(m.decode('utf-8'))
 )
 
-print(consumer.poll(100))
 x=0
 for message in consumer:
     print("message received")
